@@ -1,0 +1,29 @@
+# + ==================================== + #
+#        ___ _   ___   __ _    ____        #
+#       |_ _| \ | \ \ / // \  / ___|       #
+#        | ||  \| |\ V // _ \| |           #
+#        | || |\  | | |/ ___ \ |___        #
+#       |___|_| \_| |_/_/   \_\____|       #
+#                                          #
+#      Discord: https://dsc.gg/InySMP      #
+#                                          #
+# + ==================================== + #
+
+
+database:
+  enabled: false
+  type: MYSQL # 可選: MYSQL 或 SQLITE
+  host: localhost
+  port: 3306
+  database: inyac_db
+  username: root
+  password: your_secure_password
+  # SQLite 專用
+  file: InyAC.db
+
+checks:
+  speed:
+    enabled: true
+    max_allowed_speed_base: 0.4 # 基礎速度，用於計算修正
+    max_violations: 20          # 達到此值將懲罰
+    violation_decay_rate: 0.05

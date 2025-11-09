@@ -1,0 +1,36 @@
+# InyAC 反作弊插件訊息配置 (messages.yml)
+# 使用 & 符號作為顏色代碼 (例如 &c 是紅色)
+
+prefix: "&6[&b&lIny&c&lAC&6]"
+
+# --- 命令相關訊息 ---
+command:
+  no_permission: "{prefix} &c您沒有權限執行此命令。"
+  usage_check: "{prefix} &e用法: /inyac check <玩家名稱>"
+  player_not_found: "{prefix} &c找不到玩家 %target% 或其未上線。"
+  reload_success: "{prefix} &a配置已成功重新載入。"
+  unknown_command: "{prefix} &e未知子命令。請使用 &b/inyac help &e查看可用命令。"
+  
+  # 幫助訊息列表
+  help_header: "{prefix} &8--- Anti-Cheat Help &8---"
+  help_footer: "{prefix} &8------------------------------"
+  help_list:
+    - "{prefix} &e/inyac help &7- 顯示此幫助訊息。"
+    - "{prefix} &e/inyac reload &7- 重新載入插件配置 (&c管理員限定&7)。"
+    - "{prefix} &e/inyac check <player> &7- 顯示玩家的實時違規等級。"
+
+# --- 違規和懲罰訊息 ---
+violation:
+  warning: "{prefix} &7警告: 偵測到移動異常。您的行為已被記錄。"
+  
+  kick_message:
+    # 這是在玩家被踢出時顯示給他們的訊息
+    header: "{prefix} &c您已被 InyAC 反作弊系統踢出伺服器。"
+    reason_speed: "{prefix} &7原因: &e速度異常 (Speed Hack)"
+    reason_flight: "{prefix} &7原因: &e飛行作弊 (Flight Hack)"
+    footer: "{prefix} &7請停止使用任何作弊客戶端。"
+
+# --- 管理員通知訊息 ---
+admin:
+  notify_format: "{prefix} &e玩家 &c%player% &e被 &c%check% &e檢測到違規，當前等級 &c%level% &e/ &c%max_level%&e。"
+  notify_kick: "{prefix} &c玩家 %player% 因 %check% 作弊被踢出。"

@@ -1,0 +1,20 @@
+name: InyAC
+version: ${version}
+main: tw.inysmp.inyac.InyAC
+api-version: 1.21
+authors: [InyTw]
+description: A custom anti-cheat solution for InySMP.
+
+commands:
+  inyac:
+    description: InyAC Anti-Cheat Commands and Management.
+    usage: /inyac <reload|check>
+    permission: inyac.admin
+
+permissions:
+  inyac.admin:
+    description: Allows access to InyAC administrative commands.
+    default: op
+  inyac.bypass:
+    description: Allows players to bypass all InyAC checks.
+    default: false
